@@ -1,10 +1,10 @@
 @use "../../../../../presets/fonts.scss";
 @use "../../../../../presets/consts.scss";
 
-.image-page-content-container{
+.order-page-content-container{
     width: consts.$home-pages-content-width-1206;
     align-self: center;
-    .image-page-content-container-return-button{
+    .order-page-content-container-return-button{
         top: 40px;
         left: 40px;
         text-decoration: none;
@@ -15,7 +15,7 @@
         cursor: pointer;
         margin-bottom: 16px;
     }
-    .image-page-content-container-return-button-text{
+    .order-page-content-container-return-button-text{
         color: consts.$title-color;
         margin-left: 9px;
         font-family: 'Jura';
@@ -23,7 +23,7 @@
         font-size: 24px;
 
     }
-    .image-page-content-container-placeholder{
+    .order-page-content-container-placeholder{
         color: var(--gray-2, #515151);
         font-family: Jura;
         font-size: 50px;
@@ -32,7 +32,7 @@
         line-height: normal;
         margin-bottom: 10px;
     }
-    .image-page-content-container-placeholder-other{
+    .order-page-content-container-placeholder-other{
             margin-top: 45px;
             color: var(--gray, #515151);
             font-family: Jura;
@@ -41,12 +41,12 @@
             font-weight: 600;
             line-height: normal;
     }
-    .image-page-content-container-other-images{
+    .order-page-content-container-other-orders{
         display: flex;
         flex-direction: column;
         margin-top: 35px;
     }
-    .image-page-content-container-other-images > div{
+    .order-page-content-container-other-orders > div{
         display: flex;
         flex-grow: 1;
         border: 5px solid #6A70F7; /* Указываем стиль границы и единицы измерения */
@@ -59,19 +59,19 @@
             margin-right: auto;
         }
     }
-    .image-page-content-container-advertising{
+    .order-page-content-container-advertising{
         width: 100%;
         margin-top: 30px;
     }
-    .image-page-content-container-advertising > img{
+    .order-page-content-container-advertising > img{
         width: 100%;
         height: 200px;
     }
-    .image-page-content-container-image-info{
+    .order-page-content-container-order-info{
         width: consts.$home-pages-content-width-1206;
         display: flex;
-        .image-page-content-container-image-info-text-container{
-            .image-page-content-container-image-info-text-container-title{
+        .order-page-content-container-order-info-text-container{
+            .order-page-content-container-order-info-text-container-title{
                     color: var(--gray, #515151);
                     font-family: Jura;
                     font-size: 40px;
@@ -80,7 +80,7 @@
                     line-height: normal;
                     margin-bottom: 30px;
             }
-            .image-page-content-container-image-info-text-container-properties{
+            .order-page-content-container-order-info-text-container-properties{
                 color: var(--gray, #515151);
                 font-family: Jura;
                 font-size: 30px;
@@ -94,9 +94,9 @@
                  }
 
             }
-            .image-page-content-container-image-info-text-container-properties-author-date{
+            .order-page-content-container-order-info-text-container-properties-author-date{
                 margin-top: 100px;
-                .image-page-content-container-image-info-text-container-properties-author{
+                .order-page-content-container-order-info-text-container-properties-author{
                     color: var(--gray, #515151);
                     font-family: Jura;
                     font-size: 30px;
@@ -110,7 +110,7 @@
                      }
                     margin-bottom: 0;
                  }
-                 .image-page-content-container-image-info-text-container-properties-date{
+                 .order-page-content-container-order-info-text-container-properties-date{
                     color: var(--gray, #515151);
                     font-family: Jura;
                     font-size: 30px;
@@ -125,12 +125,12 @@
                  }
             }
             
-            .image-page-content-container-image-info-text-container-buttons-container{
+            .order-page-content-container-order-info-text-container-buttons-container{
                 width: 100%;
                 display: flex;
                 align-items: center;
                 margin-top: 95px;
-                .image-page-content-container-image-info-text-container-buttons-container-download{
+                .order-page-content-container-order-info-text-container-buttons-container-download{
                     position: relative;
                     color: consts.$title-color;
                     font-family: 'Jura';
@@ -148,7 +148,7 @@
                     border-radius: consts.$border-radius;
                     align-self: center;
                 }
-                .image-page-content-container-image-info-text-container-buttons-container-share{
+                .order-page-content-container-order-info-text-container-buttons-container-share{
                     display: flex;
                     width: 74px;
                     height: 74px;

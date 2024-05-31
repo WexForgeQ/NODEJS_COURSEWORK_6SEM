@@ -72,7 +72,7 @@ export const BoxerCalculator = () => {
         <div className="boxer-service-calculator">
             <div className="boxer-service-calculator-title">Калькулятор предварительного расчёта цены</div>
             <div className="boxer-service-calculator-inputs">
-                {price == "" ? <></> : <div className="boxer-service-calculator-result"><p>Расчетная цена: {price}BYN</p><CustomAuthButton type = "button" text = 'Оформление заказа' className="boxer-service-calculator-result-button"></CustomAuthButton></div>}
+                {price == "" ? <></> : <div className="boxer-service-calculator-result"><p>Расчетная цена: {price}BYN</p></div>}
                 <form onSubmit = {calculate} className="boxer-service-calculator-form">
                     <p className="boxer-service-calculator-form-placeholder">Вес</p>
                     <CustomInput id = "weight" name = "weight" type = "input" className = 'boxer-service-calculator-form-input' placeholder = "Введите примерный вес(кг)"></CustomInput>

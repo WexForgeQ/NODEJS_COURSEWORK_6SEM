@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useEffect } from "react"
 import {useLocation, useNavigate, useParams} from "react-router-dom"
 import { returnIcon } from "../../../../../assets/auth-wrapper-page"
-import '../../../../../styles/pages/home/home-pages/gallery/image-page/image-page.scss'
+import '../../../../../styles/pages/home/home-pages/order/order-page/order-page.scss'
 import Sad from '../testimg/TerenceSad.jpg'
 import { CustomButton } from "../../../../../reused/gallery/buttons/CustomButton";
 import { ShareIcon } from "../../../../../assets/icons"
@@ -84,45 +84,45 @@ export const SingleOrdersPage = () => {
 
     const navigate = useNavigate()
     return (
-    <div className="image-page-content-container">
+    <div className="order-page-content-container">
          {isLoading ? <></> : <>
-        <div onClick={() => navigate(-1)} className="image-page-content-container-return-button">
+        <div onClick={() => navigate(-1)} className="order-page-content-container-return-button">
         <img src = {returnIcon.svg_icon}></img>
-        <p className="image-page-content-container-return-button-text">Назад</p>
+        <p className="order-page-content-container-return-button-text">Назад</p>
         </div>
-        <div className="image-page-content-container-placeholder"><span>Заказ №{singleOrder && singleOrder.order && singleOrder.order.id} Статус: {singleOrder && singleOrder.order && singleOrder.order.order_status}</span></div>
-        <div className="image-page-content-container-image-info">
-        <div className="image-page-content-container-image-info-text-container">
-        <div className="image-page-content-container-image-info-text-container-properties"><span>Автомобиль: </span>   {singleOrder.order && singleOrder.order.car_id}</div>
-        <div className="image-page-content-container-image-info-text-container-properties"><span>Водитель: </span><span>{singleOrder.driver && singleOrder.driver.fio}</span></div>
-        <div className="image-page-content-container-image-info-text-container-properties"><span>Номер водителя: </span><span>{singleOrder.driver && singleOrder.driver.phone}</span></div>
-        <div className="image-page-content-container-image-info-text-container-properties"><span>Пункт отправления: </span> {singleOrder.order && singleOrder.order.departure_point}</div>
-        <div className="image-page-content-container-image-info-text-container-properties"><span>Пункт прибытия: </span> {singleOrder.order && singleOrder.order.destination_point}</div>      
+        <div className="order-page-content-container-placeholder"><span>Заказ №{singleOrder && singleOrder.order && singleOrder.order.id} Статус: {singleOrder && singleOrder.order && singleOrder.order.order_status}</span></div>
+        <div className="order-page-content-container-order-info">
+        <div className="order-page-content-container-order-info-text-container">
+        <div className="order-page-content-container-order-info-text-container-properties"><span>Автомобиль: </span>   {singleOrder.order && singleOrder.order.car_id}</div>
+        <div className="order-page-content-container-order-info-text-container-properties"><span>Водитель: </span><span>{singleOrder.driver && singleOrder.driver.fio}</span></div>
+        <div className="order-page-content-container-order-info-text-container-properties"><span>Номер водителя: </span><span>{singleOrder.driver && singleOrder.driver.phone}</span></div>
+        <div className="order-page-content-container-order-info-text-container-properties"><span>Пункт отправления: </span> {singleOrder.order && singleOrder.order.departure_point}</div>
+        <div className="order-page-content-container-order-info-text-container-properties"><span>Пункт прибытия: </span> {singleOrder.order && singleOrder.order.destination_point}</div>      
             {status === "Выполнен" || status === "Выполняется" ? <>
-            <div className="image-page-content-container-image-info-text-container-buttons-container">
-                {user_role == 1 && status == "Выполняется" ? <><CustomButton clickCallback = {finishChange} text = "Завершить" className = "image-page-content-container-image-info-text-container-buttons-container-download">
+            <div className="order-page-content-container-order-info-text-container-buttons-container">
+                {user_role == 1 && status == "Выполняется" ? <><CustomButton clickCallback = {finishChange} text = "Завершить" className = "order-page-content-container-order-info-text-container-buttons-container-download">
                 </CustomButton></> : <></>}
             </div></> 
             :<>
             {user_role == 0 && status == "Ожидает подтверждения" ? <>
-            <div className="image-page-content-container-image-info-text-container-buttons-container">
-            <CustomButton clickCallback = {handleChange} text = "Отменить" className = "image-page-content-container-image-info-text-container-buttons-container-download">
+            <div className="order-page-content-container-order-info-text-container-buttons-container">
+            <CustomButton clickCallback = {handleChange} text = "Отменить" className = "order-page-content-container-order-info-text-container-buttons-container-download">
             </CustomButton>
-            <CustomButton clickCallback = {submitChange} text = "Подтвердить" className = "image-page-content-container-image-info-text-container-buttons-container-download">
-            </CustomButton></div></> : <div className="image-page-content-container-image-info-text-container-buttons-container">
-                {user_role == 1 && status == "Забронирован" ? <><CustomButton clickCallback = {startChange} text = "Приступить" className = "image-page-content-container-image-info-text-container-buttons-container-download">
-                </CustomButton></> : <> <CustomButton clickCallback = {handleChange} text = "Отменить" className = "image-page-content-container-image-info-text-container-buttons-container-download">
+            <CustomButton clickCallback = {submitChange} text = "Подтвердить" className = "order-page-content-container-order-info-text-container-buttons-container-download">
+            </CustomButton></div></> : <div className="order-page-content-container-order-info-text-container-buttons-container">
+                {user_role == 1 && status == "Забронирован" ? <><CustomButton clickCallback = {startChange} text = "Приступить" className = "order-page-content-container-order-info-text-container-buttons-container-download">
+                </CustomButton></> : <> <CustomButton clickCallback = {handleChange} text = "Отменить" className = "order-page-content-container-order-info-text-container-buttons-container-download">
                 </CustomButton></>}
             </div>}</>}
-        <div className="image-page-content-container-image-info-text-container-properties-author-date">
-            <div className="image-page-content-container-image-info-text-container-properties-author"><span>Заказчик:</span><span>{singleOrder.customer && singleOrder.customer.fio}</span></div>
-            <div className="image-page-content-container-image-info-text-container-properties-date"><span>Дата выполнения:</span><span>{date}</span></div>
-            <div className="image-page-content-container-image-info-text-container-properties-date"><span>Стоимость:</span><span>{singleOrder.customer && singleOrder.order.price} BYN</span></div>
+        <div className="order-page-content-container-order-info-text-container-properties-author-date">
+            <div className="order-page-content-container-order-info-text-container-properties-author"><span>Заказчик:</span><span>{singleOrder.customer && singleOrder.customer.fio}</span></div>
+            <div className="order-page-content-container-order-info-text-container-properties-date"><span>Дата выполнения:</span><span>{date}</span></div>
+            <div className="order-page-content-container-order-info-text-container-properties-date"><span>Стоимость:</span><span>{singleOrder.customer && singleOrder.order.price} BYN</span></div>
         </div>
         </div>
         </div>
-        <div className="image-page-content-container-placeholder-other">Список грузов:</div>
-        {<div className="image-page-content-container-other-images">
+        <div className="order-page-content-container-placeholder-other">Список грузов:</div>
+        {<div className="order-page-content-container-other-orders">
             {(singleOrder.cargos && singleOrder.cargos.map((item, index) =>{
                        return(<div><p>Название: {item.name}</p><p>Вес: {item.weight}</p><p>Количество: {item.quantity}</p></div>)
                     }))}

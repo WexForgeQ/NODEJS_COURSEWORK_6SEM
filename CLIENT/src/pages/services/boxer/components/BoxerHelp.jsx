@@ -13,7 +13,7 @@ export const BoxerHelp = () => {
     const user_role = useSelector(state => state.authData.user_role)
 
     useEffect(() => {
-    if(localStorage.getItem("role") == 0){
+    if(user_role == 0){
         setMe("admin");
         const newSocket = new WebSocket('wss://localhost:5000/reviewsocket');
         setSocket(newSocket)
@@ -86,12 +86,9 @@ export const BoxerHelp = () => {
         console.log(user_role);
         if (inputValue) {
             if(user_role == 0){
-                console.log(123)
                 if(inputValue.includes("|")){
                     const msg = inputValue.split("|")[1];
                     const receiver = inputValue.split("|")[0];
-                    console.log(receiver);
-                    console.log(msg)
                     socket.send(JSON.stringify({ 
                         message: msg,
                         userToken: localStorage.getItem(process.env.REACT_APP_ACCESS_TOKEN),

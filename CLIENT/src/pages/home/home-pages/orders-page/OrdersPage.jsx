@@ -2,11 +2,11 @@ import React, {useEffect, useRef, useState} from "react";
 import {Outlet, useLocation, useNavigate} from "react-router-dom";
 import {HOME_PAGE_WRAPPER_ROUTES, SERVICE_ROUTES } from "../../../../consts/url-routes";
 import { ORDERS_PAGE_ROUTES } from "../../../../consts/url-routes";
-import '../../../../styles/pages/home/home-pages/gallery/gallery-page.scss'
+import '../../../../styles/pages/home/home-pages/order/order-page.scss'
 import { SearchIcon, NotFoundIcon, ArrowIcon } from "../../../../assets/icons";
 import { returnIcon } from "../../../../assets/auth-wrapper-page";
 import { home_inputs } from "../../../../consts/forms";
-import { gallery_filters } from "../../../../consts/forms/filters";
+import { boxer_filters } from "../../../../consts/forms/filters";
 import { CustomButton } from "../../../../reused/gallery/buttons/CustomButton";
 import { useDispatch, useSelector } from "react-redux";
 import { StandartFilter } from "../../../../reused/filters/Standartfilter";
@@ -28,7 +28,7 @@ export const OrdersPage = () => {
     const [flag, setFlag] = useState(false);
     const [orders, setOrders] = useState([]);
     const [maxpage, setMaxPage] = useState(1);
-    const [activeFilter, setActiveFilter] = useState(gallery_filters[0])
+    const [activeFilter, setActiveFilter] = useState(boxer_filters[0])
     const [showFilter, setShowFilter] = useState()
 
     const SelectorHandler = (item) =>{
@@ -85,16 +85,16 @@ export const OrdersPage = () => {
         ? 
         <>
         {isLoading ? <>LOADING...</> : <>
-        <div className="gallery-page-content-container">
-            <div className="gallery-page-content-container-filter-container">
-                <div className="gallery-page-content-container-filter-container-filter">
-                <div className="gallery-page-content-container-filter-container-filter-title"><span>статус:</span></div>
-                <div onClick={() => setShowFilter(!showFilter)} className="gallery-page-content-container-filter-container-filter-selector">
-                <p className="gallery-page-content-container-filter-container-filter-selector-text">{activeFilter.text}</p>
+        <div className="order-page-content-container">
+            <div className="order-page-content-container-filter-container">
+                <div className="order-page-content-container-filter-container-filter">
+                <div className="order-page-content-container-filter-container-filter-title"><span>статус:</span></div>
+                <div onClick={() => setShowFilter(!showFilter)} className="order-page-content-container-filter-container-filter-selector">
+                <p className="order-page-content-container-filter-container-filter-selector-text">{activeFilter.text}</p>
     {showFilter ?
     <div>
     <StandartFilter
-            filters = {gallery_filters}
+            filters = {boxer_filters}
             activeFilter={activeFilter} 
             clickCallback = {SelectorHandler}
     />
@@ -106,19 +106,19 @@ export const OrdersPage = () => {
         </div>
             </div>
             </div>
-            <div onClick={()=>setShowFilter(false)}  className ="gallery-page-content-container-images-gallery">
-                    {(orders.length > 0) ? <><div className="gallery-page-content-container-images-gallery-images-found">{(orders.map((item, index) =>{
+            <div onClick={()=>setShowFilter(false)}  className ="order-page-content-container-images-order">
+                    {(orders.length > 0) ? <><div className="order-page-content-container-images-order-images-found">{(orders.map((item, index) =>{
                         let borderStyle = "";
 
                         if (item.order_status === "Выполнен") {
-                          borderStyle = "gallery-page-content-container-images-grid-ready";
+                          borderStyle = "order-page-content-container-images-grid-ready";
                         } else if (item.order_status === "Забронирован") {
-                          borderStyle = "gallery-page-content-container-images-grid-not-ready";
+                          borderStyle = "order-page-content-container-images-grid-not-ready";
                         } else if (item.order_status === "Ожидает подтверждения") {
-                            borderStyle = "gallery-page-content-container-images-grid-reserved";
+                            borderStyle = "order-page-content-container-images-grid-reserved";
                         }
                         else if (item.order_status === "Отменён") {
-                            borderStyle = "gallery-page-content-container-images-grid-declined";
+                            borderStyle = "order-page-content-container-images-grid-declined";
                         }
                         const date = new Date(item.order_date);
                         const formattedDate = date.toLocaleDateString();
@@ -127,30 +127,29 @@ export const OrdersPage = () => {
                         </div>
                     }))}</div></> : <>
                     
-                    <div className = "gallery-page-content-container-not-found">
-                        <span className = "gallery-page-content-container-not-found-text">К сожалению, у вас нет заказов такого статуса</span>
-                        <div className="gallery-page-content-container-not-found-img"><img src={NotFoundIcon.svg_icon} alt_prop = {NotFoundIcon.alt_prop}></img></div>
-                        <CustomButton clickCallback = {() => navigate(SERVICE_ROUTES.chagall.route)} text = "Переидти на страницу оформления" divClassName = "gallery-page-content-container-page-scroll-button" className = "gallery-page-content-container-not-found-button"></CustomButton>
+                    <div className = "order-page-content-container-not-found">
+                        <span className = "order-page-content-container-not-found-text">К сожалению, у вас нет заказов такого статуса</span>
+                        <div className="order-page-content-container-not-found-img"><img src={NotFoundIcon.svg_icon} alt_prop = {NotFoundIcon.alt_prop}></img></div>
                     </div>
                     
                     
                     </>}
             </div>
-        <div className="gallery-page-content-container-page-scroll">
-            <div className="gallery-page-content-container-page-scroll-buttons-container">
+        <div className="order-page-content-container-page-scroll">
+            <div className="order-page-content-container-page-scroll-buttons-container">
                 {
                     maxPage === 1 ? <></> :
-                    page_number === 1 ? <><CustomButton clickCallback = {nextImagePage} icon = {ArrowIcon} text = "Далее" divClassName = "gallery-page-content-container-page-scroll-button" className = "gallery-page-content-container-page-scroll-button-button"></CustomButton></> :
-                    page_number === maxpage ? <><img style={{marginRight: "0"}} onClick = {prevImagePage} className="gallery-page-content-container-page-scroll-buttons-container-return-button" src = {returnIcon.svg_icon}></img></> :
+                    page_number === 1 ? <><CustomButton clickCallback = {nextImagePage} icon = {ArrowIcon} text = "Далее" divClassName = "order-page-content-container-page-scroll-button" className = "order-page-content-container-page-scroll-button-button"></CustomButton></> :
+                    page_number === maxpage ? <><img style={{marginRight: "0"}} onClick = {prevImagePage} className="order-page-content-container-page-scroll-buttons-container-return-button" src = {returnIcon.svg_icon}></img></> :
                     <>
-                    <img onClick = {prevImagePage} className="gallery-page-content-container-page-scroll-buttons-container-return-button" src = {returnIcon.svg_icon}></img>
-                    <CustomButton clickCallback = {nextImagePage} icon = {ArrowIcon}  text = "Далее" divClassName = "gallery-page-content-container-page-scroll-button" className = "gallery-page-content-container-page-scroll-button-button"></CustomButton>
+                    <img onClick = {prevImagePage} className="order-page-content-container-page-scroll-buttons-container-return-button" src = {returnIcon.svg_icon}></img>
+                    <CustomButton clickCallback = {nextImagePage} icon = {ArrowIcon}  text = "Далее" divClassName = "order-page-content-container-page-scroll-button" className = "order-page-content-container-page-scroll-button-button"></CustomButton>
                     </>
                 }
             </div>
         </div>
         {maxPage == 0 ? <></> :
-        <div className="gallery-page-content-container-page-scroll-pages-routing"><span>Страница</span><span className="gallery-page-content-container-page-scroll-pages-routing-decorative-number">{page_number}</span><span>из {maxpage}</span></div>}
+        <div className="order-page-content-container-page-scroll-pages-routing"><span>Страница</span><span className="order-page-content-container-page-scroll-pages-routing-decorative-number">{page_number}</span><span>из {maxpage}</span></div>}
         </div>
         </>}
         </>

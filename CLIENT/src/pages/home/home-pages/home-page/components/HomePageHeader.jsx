@@ -27,12 +27,12 @@ export const HomePageHeader = () => {
                 <div className="home-page-header-container-service">
                     <img className="home-page-header-container-service-img" src={chagall_header_png.png} alt={chagall_header_png.alt_prop} />
                     {localStorage.getItem("USERID") ? 
-                    <div onClick={() => navigate(SERVICE_ROUTES.chagall.dynamic_link + "/" + localStorage.getItem("USERID"))} className="home-page-header-container-service-link">
+                    <div onClick={() => navigate(SERVICE_ROUTES.boxer.dynamic_link + "/" + localStorage.getItem("USERID"))} className="home-page-header-container-service-link">
                     Поехали
                     <img  src={service_link.svg_icon} alt={service_link.alt_prop} />
                     </div>
                     : 
-                    <div className="home-page-header-container-service-link" >
+                    <div onClick={() => navigate(AUTH_ROUTES.login.route)} className="home-page-header-container-service-link" >
                      Поехали
                     <img src={service_link.svg_icon} alt={service_link.alt_prop} />
                     </div>}

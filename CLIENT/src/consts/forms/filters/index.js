@@ -1,4 +1,4 @@
-export const gallery_filters = [
+export const boxer_filters = [
     {id: 1, text: "Все"},
     {id: 2, text: "Выполнен"},
     {id: 3, text: "Забронирован"},

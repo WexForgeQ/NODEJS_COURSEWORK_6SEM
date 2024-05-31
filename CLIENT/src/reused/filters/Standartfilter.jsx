@@ -1,6 +1,6 @@
 import { useState, memo } from "react";
 import { gallery_filters } from "../../consts/forms";
-import '../../styles/pages/home/home-pages/gallery/reused/gallery-filter.scss'
+import '../../styles/pages/home/home-pages/order/reused/gallery-filter.scss'
 import { OutlineIcon } from "../../assets/icons";
 export const StandartFilter = memo(({id, name, filters, activeFilter, clickCallback})=>{
 
