@@ -1,0 +1,51 @@
+@use "../../../../../presets/fonts.scss";
+@use "../../../../../presets/consts.scss";
+
+.standart-gallery-filter{
+    background-color: white;
+
+    width: fit-content;
+    border-radius: 36px;
+    position: absolute;
+    &:first-child{
+        padding-top: 24px;
+    }
+    &:last-child{
+        padding-bottom: 24px;
+    }
+    .standart-gallery-filter-container{
+        margin-bottom: 17px;
+        padding-left: 18px;
+        padding-right: 18px;
+        display: flex;
+        align-items: center;
+        .standart-gallery-filter-container-placeholder{
+            width: 20px;
+            height: 20px;
+        }
+        .standart-gallery-filter-text-active{
+            margin: 0;
+            color: var(--gray, #515151);
+            margin-left: 5px;
+            text-align: left;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .standart-gallery-filter-text-not-active{
+            color: var(--zagolovok, #939393);
+            margin: 0;
+            margin-left: 5px;
+            text-align: left;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .standart-gallery-filter-container > img{
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

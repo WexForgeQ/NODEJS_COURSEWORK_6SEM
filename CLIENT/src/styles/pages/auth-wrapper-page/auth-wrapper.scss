@@ -1,0 +1,17 @@
+.authwrapperpage-content-container {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    .authwrapperpage-content-container-background-image-container {
+        display: block;
+        width: 500px;
+        margin: 0;
+        padding: 0;
+        .authwrapperpage-content-container-background-image-container-image{
+            height: 100%;
+        }
+    }
+
+}

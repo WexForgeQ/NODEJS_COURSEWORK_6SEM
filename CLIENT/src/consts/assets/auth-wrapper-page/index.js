@@ -1,0 +1,1 @@
+export * as ASSETS from '../../assets/auth-wrapper-page/background-robot.svg' 

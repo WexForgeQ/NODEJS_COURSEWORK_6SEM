@@ -1,0 +1,163 @@
+@use "../../presets/consts";
+
+.home-page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    .home-page-wrapper-navbar {
+        display: flex;
+        justify-content: center;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-bottom: 55px;
+        top:0px;
+        position: sticky;
+        z-index: 2;
+
+        .home-page-wrapper-navbar-container {
+            display: flex;
+            width: consts.$home-pages-content-width-1206 - 74px - 17px;
+            align-items: center;
+            padding: 18px 17px 16px 74px;
+            border-radius: 40px;
+            background: #FFF;
+            justify-content: space-between;
+
+            box-shadow: 0px 0px 6.9px 0px rgba(193, 160, 236, 0.21);
+
+            .home-page-wrapper-navbar-logo {
+                img {
+                    cursor: pointer;
+                }
+            }
+
+            .home-page-wrapper-navbar-sections {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                .home-page-wrapper-navbar-sections-item {
+                    font-size: 25px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    color: consts.$title-color;
+                }
+            }
+
+            .home-page-wrapper-navbar-current-user {
+                .home-page-wrapper-navbar-current-user-btn {
+                    display: flex;
+                    padding: 6px 60px 7px 60px;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    border: none;
+                    background: #6A70F7;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+    .home-page-wrapper-footer {
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        background: #FFF;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        .home-page-wrapper-footer-container {
+            display: flex;
+            flex-direction: column;
+            width: consts.$home-pages-content-width-1206;
+            padding-top: 50px;
+            padding-bottom: 55px;
+
+            .home-page-wrapper-footer-content {
+                display: flex;
+                margin-bottom: 41px;
+                justify-content: space-between;
+
+                .home-page-wrapper-footer-content-logo {
+                    img {
+                        cursor: pointer;
+                    }
+                }
+
+                .home-page-wrapper-footer-content-1 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    color: consts.$title-color;
+
+                    .home-page-wrapper-footer-content-1-1 {
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        margin-top: 10px;
+                        cursor: pointer;
+                    }
+
+                    .home-page-wrapper-footer-content-1-2 {
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .home-page-wrapper-footer-under {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .home-page-wrapper-footer-under-cert {
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    color: consts.$title-color;
+                    line-height: normal;
+                }
+
+                .home-page-wrapper-footer-under-info {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .home-page-wrapper-footer-under-donate {
+                        padding: 7px 17px 10px 27px;
+                        border: 1px solid consts.$title-color;
+                        color: consts.$text-color;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        font-size: 25px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+
+                    .home-page-wrapper-footer-under-social {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

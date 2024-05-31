@@ -1,0 +1,16 @@
+@use "./presets/layouts";
+@use "./presets/consts";
+@use "./presets/fonts";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Jura", sans-serif;
+
+    button {
+        font-family: "Jura", sans-serif;
+    }
+    input {
+        font-family: "Jura", sans-serif;
+    }
+}

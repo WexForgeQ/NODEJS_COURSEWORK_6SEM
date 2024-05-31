@@ -1,0 +1,1026 @@
+@use "../../../presets/consts";
+
+.boxer-service {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+
+    .boxer-service-sidebar {
+        width: 152px;
+        background-color: #FAFBFF;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        justify-content: space-between;
+
+        .boxer-service-sidebar-logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .boxer-service-sidebar-logo-img {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    justify-content: center;
+                    width: 200px;
+                    height: 50px;
+                }
+            }
+
+
+            .boxer-service-sidebar-logo-text {
+                display: flex;
+                justify-content: center;
+                font-size: 40px;
+                font-weight: 700;
+                letter-spacing: -3.2px;
+                background: linear-gradient(90deg, #6A70F7 0%, #515151 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .boxer-service-sidebar-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+
+            .boxer-service-sidebar-menu-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+
+                svg {
+                    transition: 0.2s;
+                }
+
+                .boxer-service-sidebar-menu-item-selected {
+                    opacity: 0;
+                    width: 5px;
+                    height: 60px;
+                    border-radius: 50px;
+                    background-color: consts.$title-color;
+                    right: 0px;
+                    position: absolute;
+
+                    @keyframes fadeInSelect {
+                        0% {
+                            opacity: 0;
+                        }
+
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+
+                    animation: fadeInSelect 0.2s ease-out forwards;
+                }
+            }
+        }
+
+        .boxer-service-sidebar-return {
+            display: flex;
+            justify-content: center;
+
+            img {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .boxer-service-content {
+        display: flex;
+        flex-grow: 1;
+        background-color: #F0F5FF;
+        .boxer-service-content-order-form-holders-second-button{
+            margin-top: 10px;
+            color: consts.$title-color;
+            font-family: 'Jura';
+            font-weight: 500;
+            font-size: consts.$font-size-inputs;
+            background-color: consts.$buttons-color;
+            width: 200px;
+            height: 50px;
+            margin-left: 100px;
+            text-decoration: none;
+            text-decoration-line: none;
+            cursor: pointer;
+            border-radius: consts.$border-radius;
+            outline: none;
+            margin-left: 550px;
+        }
+        .boxer-service-content-order{
+            display: flex;
+            width: 100%;    
+            flex-direction: column;
+            padding-bottom: 25px;
+            .boxer-service-content-order-form-holders{
+                display: flex;
+                .boxer-service-content-order-form-holders-first{
+                    display: flex;
+                    flex-direction: column;
+                    width: fit-content;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    justify-items: center;
+                    align-items: center;
+                    p{
+                        height: fit-content;
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                        align-self: center;
+                        font-size: 30px;
+                    }
+                    .boxer-service-calculator-form-selector{
+                        width: 200px;
+                        height: 55px;
+                        background-color:  consts.$inputs-color;
+                        border-radius: consts.$border-radius;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        display: flex;
+                        text-align: left;
+                        align-items: center;
+                        padding-left: 16px;
+                        font-size: 20px;
+                    }
+                .boxer-service-content-order-form-holders-second-button{
+                        margin-top: 10px;
+                        color: consts.$title-color;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        font-size: consts.$font-size-inputs;
+                        background-color: consts.$buttons-color;
+                        width: 200px;
+                        height: 30px;
+                        margin-left: 100px;
+                        text-decoration: none;
+                        text-decoration-line: none;
+                        cursor: pointer;
+                        border-radius: consts.$border-radius;
+                        outline: none;
+                    }
+                .boxer-service-content-order-form-holders-first-placeholder{
+                    margin: 0;
+                    color: consts.$text-color;
+                    border:0;
+                    padding-left: 16px;
+                    margin-bottom: 10px;
+                    text-align: left;
+                    font-family: 'Jura';
+                    font-weight: 500;
+                    font-size: consts.$font-size-inputs;
+                    align-self: flex-start;
+                }
+                .boxer-service-content-order-form-holders-first-input
+                {
+                    background-color:  consts.$inputs-color;
+                    border-radius: consts.$border-radius;
+                    display: block;
+                    width: 300px;
+                    height: 30px;
+                    cursor: pointer;
+                }
+                .boxer-service-content-order-form-holders-first-input > input {
+                    background-color: none;
+                    padding-left: 16px;
+                    border:0;  
+                    text-align: left;
+                    font-family: 'Jura';
+                    font-weight: 500;
+                    font-size: consts.$font-size-inputs;
+                    border-radius: consts.$border-radius;
+                    width: 300px;
+                    height: 30px;
+                    outline:none;
+                };
+                    border: 5px solid #6A70F7;
+                    border-radius: 10px;
+                    
+                }
+                .boxer-service-content-order-form-holders-second{
+                    display: flex;
+                    margin-right: 10px;
+                    border: 5px solid #6A70F7;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 30%;
+                    p{
+                        font-size: 30px;
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+                    .boxer-service-calculator-form-button{
+                        color: consts.$title-color;
+                        font-family: 'Jura';
+                        font-weight: 600;
+                        font-size: consts.$font-size-inputs;
+                        background-color: 
+                        consts.$buttons-color;
+                        width: 50%;
+                        height: 55px;
+                        border: 0;
+                        text-decoration: none;
+                        text-decoration-line: none;
+                        cursor: pointer;
+                        border-radius: consts.$border-radius;
+                        align-self: center;
+                        margin-bottom: 14px;
+                        margin-top: 30px;
+                        }
+                    .boxer-service-content-order-form-holders-second-cargos{
+                        border: 5px solid #000000;
+                        border-radius: 15px;
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        height: 200px;
+                        overflow-y: auto;
+
+                        &::-webkit-scrollbar {
+                            width: 18px;
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background-color: #EAEAEA;
+                            border-radius: 20px;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #B3AEBA;
+                            border-radius: 20px;
+                        }
+                    }
+                    .boxer-service-content-order-form-holders-second-cargos > div{
+                        height: 100px;
+                        display: flex;
+                        border: 5px solid #6A70F7; /* Указываем стиль границы и единицы измерения */
+                        border-radius: 15px;
+                        margin-bottom: 10px;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                        p{
+                            font-size: 20px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                    .boxer-service-content-order-form-holders-second-button{
+                        margin-top: 10px;
+                        color: consts.$title-color;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        font-size: consts.$font-size-inputs;
+                        background-color: consts.$buttons-color;
+                        width: 200px;
+                        height: 30px;
+                        margin-left: 100px;
+                        text-decoration: none;
+                        text-decoration-line: none;
+                        cursor: pointer;
+                        border-radius: consts.$border-radius;
+                        outline: none;
+                    }
+                    .boxer-service-content-order-form-holders-second-placeholder{
+                        margin: 0;
+                        color: consts.$text-color;
+                        border:0;
+                        padding-left: 16px;
+                        margin-bottom: 10px;
+                        text-align: left;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        font-size: consts.$font-size-inputs;
+                        align-self: flex-start;
+                    }
+                    .boxer-service-content-order-form-holders-second-add{
+                        display: flex;
+                        flex-direction: column;
+                        .boxer-service-content-order-form-holders-second-input
+                        {
+                            margin-left: 20px;
+                            margin-right: 20px;
+                            background-color:  consts.$inputs-color;
+                            border-radius: consts.$border-radius;
+                            display: block;
+                            width: 100px;
+                            height: 30px;
+                            cursor: pointer;
+                        }
+                        .boxer-service-content-order-form-holders-second-input > input {
+                            background-color: none;
+                            margin-left: 10px;
+                            padding-left: 16px;
+                            border:0;  
+                            text-align: left;
+                            font-family: 'Jura';
+                            font-weight: 500;
+                            font-size: consts.$font-size-inputs;
+                            border-radius: consts.$border-radius;
+                            width: 100px;
+                            height: 30px;
+                            outline:none;
+                        };
+                    }
+                }
+                .boxer-service-content-order-form-holders-third{
+                    border: 5px solid #6A70F7;
+                    border-radius: 10px;
+                    justify-items: center;
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    width: 30%;
+                    p{
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                        text-align: center;
+                    }
+                }
+            }
+            .boxer-service-content-order-title{
+                display: flex;
+                width: 100%; 
+                font-weight: 800;
+                p{
+                    align-self: start;
+                    font-size: 40px;
+                    margin-left: 50px;
+                }
+            }
+        }
+        .boxer-service-profile{
+            display: flex;
+            width: 100%;    
+            flex-direction: column;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            .boxer-service-profile-edit{
+                margin-left: 50px;
+                display: flex;
+                .boxer-service-profile-edit-button{
+                    margin-top: 30px;
+                    color: consts.$title-color;
+                    font-family: 'Jura';
+                    font-weight: 500;
+                    font-size: consts.$font-size-inputs;
+                    background-color: consts.$buttons-color;
+                    width: 200px;
+                    height: 55px;
+                    text-decoration: none;
+                    text-decoration-line: none;
+                    cursor: pointer;
+                    border-radius: consts.$border-radius;
+                    outline: none;
+                }
+                .boxer-service-profile-edit-placeholder
+                    {
+                        margin: 0;
+                        color: consts.$text-color;
+                        border:0;
+                        padding-left: 16px;
+                        margin-top: 25px;
+                        margin-bottom: 5px;
+                        text-align: left;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        font-size: consts.$font-size-inputs;
+                    }
+                .boxer-service-profile-edit-input
+                    {
+                        background-color:  consts.$inputs-color;
+                        border-radius: consts.$border-radius;
+                        display: block;
+                        width: 500px;
+                        height: 55px;
+                        cursor: pointer;
+                    }
+                    .boxer-service-profile-edit-input > input {
+                        margin-top: 0;
+                        background-color: none;
+                        padding-left: 16px;
+                        border:0;  
+                        text-align: left;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        font-size: consts.$font-size-inputs;
+                        border-radius: consts.$border-radius;
+                        width: 500px;
+                        height: 53px;
+                        outline:none;
+                    };
+            }
+            .boxer-service-profile-info{
+                display: flex;
+                flex-direction: column;
+
+                .boxer-service-profile-info-field{
+                margin-left: 50px;
+                display: flex;
+                flex-direction: row;
+                    :first-child{
+                    font-size: 25px;
+                    font-weight: 600;
+                    margin-right: 20px;
+                    }
+                font-size: 25px;
+                font-weight: 400;
+                }
+            }
+            .boxer-service-profile-title{
+                display: flex;
+                width: 100%; 
+                font-weight: 800;
+                p{
+                    align-self: start;
+                    font-size: 40px;
+                    margin-left: 50px;
+                }
+                img{
+                    margin-left: auto;
+                    margin-right: 50px;
+                }
+
+            }
+        }
+
+
+        .boxer-service-calculator{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            .boxer-service-calculator-title{
+                display: flex;
+                background-color: #6A70F7;
+                font-size: 40px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                height: 100px;
+                width: 70%;
+                border-radius: 40px;
+            }
+            .boxer-service-calculator-result{
+                color: consts.$title-color;
+                margin-left: 30px;
+                display: flex;
+                font-size: 20px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                justify-items: center;
+                height: 100px;
+                font-weight: 600;
+                width: 70%;
+                border-radius: 40px;
+                .boxer-service-calculator-result-button{
+                    margin-left: 50px;
+                    color: consts.$title-color;
+                    font-family: 'Jura';
+                    font-weight: 500;
+                    font-size: consts.$font-size-inputs;
+                    background-color: 
+                    consts.$buttons-color;
+                    width: 300px;
+                    height: 55px;
+                    border: 0;
+                    text-decoration: none;
+                    text-decoration-line: none;
+                    cursor: pointer;
+                    border-radius: consts.$border-radius;
+                    align-self: center;
+                    margin-bottom: 14px;
+                    margin-top: 30px;
+                }
+            }
+            .boxer-service-calculator-form{
+                width: 700px;
+                margin-left: 50px;
+                display: flex;
+                flex-direction: column;
+                    .boxer-service-calculator-form-placeholder
+                    {
+                        margin: 0;
+                        color: consts.$text-color;
+                        border:0;
+                        padding-left: 16px;
+                        margin-top: 25px;
+                        margin-bottom: 5px;
+                        text-align: left;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        font-size: consts.$font-size-inputs;
+                    }
+                    .boxer-service-calculator-form-input
+                    {
+                        background-color:  consts.$inputs-color;
+                        border-radius: consts.$border-radius;
+                        display: block;
+                        width: 500px;
+                        height: 55px;
+                        cursor: pointer;
+                    }
+                    .boxer-service-calculator-form-input > input {
+                        margin-top: 0;
+                        background-color: none;
+                        padding-left: 16px;
+                        border:0;  
+                        text-align: left;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        font-size: consts.$font-size-inputs;
+                        border-radius: consts.$border-radius;
+                        width: 500px;
+                        height: 53px;
+                        outline:none;
+                    };
+                    .boxer-service-calculator-form-selector{
+                        width: 500px;
+                        height: 55px;
+                        background-color:  consts.$inputs-color;
+                        border-radius: consts.$border-radius;
+                        font-family: 'Jura';
+                        font-weight: 500;
+                        display: flex;
+                        text-align: left;
+                        align-items: center;
+                        padding-left: 16px;
+                        font-size: 20px;
+                    }
+                    .boxer-service-calculator-form-button{
+                    color: consts.$title-color;
+                    font-family: 'Jura';
+                    font-weight: 600;
+                    font-size: consts.$font-size-inputs;
+                    background-color: 
+                    consts.$buttons-color;
+                    width: 50%;
+                    height: 55px;
+                    border: 0;
+                    text-decoration: none;
+                    text-decoration-line: none;
+                    cursor: pointer;
+                    border-radius: consts.$border-radius;
+                    align-self: center;
+                    margin-bottom: 14px;
+                    margin-top: 30px;
+                    }
+            }
+        }
+
+        .boxer-service-home {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            flex-grow: 1;
+
+            .boxer-service-home-container {
+                display: flex;
+                gap: 14px;
+
+                .boxer-service-home-chat {
+                    max-width: 1008px;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    gap: 50px;
+
+                    .boxer-service-home-chat-input {
+                        display: flex;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 0px;
+                        width: 952px;
+
+                        .boxer-service-home-chat-input-filter-button {
+                            margin-right: 16px;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                            position: relative;
+
+                            img {
+                                cursor: pointer;
+                                width: 51px;
+                                height: 51px;
+                            }
+
+                            .boxer-service-home-chat-input-filter-button-window {
+                                position: absolute;
+                                padding: 25px 30px 41px 30px;
+                                display: flex;
+                                flex-direction: column;
+                                background-color: #F9FBFF;
+                                border-radius: 38px;
+                                width: fit-content;
+                                bottom: 82px;
+                                z-index: 2;
+
+                                .boxer-service-home-chat-input-filter-button-window-close {
+                                    position: absolute;
+                                    top: 32px;
+                                    right: 32px;
+                                    width: 22px;
+                                    height: 22px;
+                                }
+
+                                .boxer-service-home-chat-input-filter-button-window-title {
+                                    display: flex;
+                                    justify-content: center;
+                                    font-size: 30px;
+                                    font-weight: 700;
+                                    color: consts.$text-color;
+                                    margin-bottom: 10px;
+                                }
+
+                                .boxer-service-home-chat-input-filter-button-window-container {
+                                    display: flex;
+                                    gap: 71px;
+
+                                    .boxer-service-home-chat-input-filter-button-window-style {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 23px;
+                                        margin-bottom: 33px;
+
+                                        .boxer-service-home-chat-input-filter-button-window-style-title {
+                                            font-size: 25px;
+                                            font-weight: 700;
+                                            color: consts.$title-color;
+                                        }
+
+
+                                        .boxer-service-home-chat-input-filter-button-window-style-item {
+                                            display: flex;
+                                            gap: 14px;
+                                            align-items: center;
+                                            cursor: pointer;
+
+                                            label {
+                                                cursor: pointer;
+                                                font-size: 30px;
+                                                font-weight: 600;
+                                            }
+
+                                            input {
+                                                cursor: pointer;
+                                                appearance: none;
+                                                -webkit-appearance: none;
+                                                -moz-appearance: none;
+                                                width: 30px;
+                                                height: 30px;
+                                                border-radius: 8px;
+                                                border: 2px solid consts.$gray2-color;
+
+                                                &:checked {
+                                                    border: none;
+                                                    background-color: #7E7E7E;
+
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .boxer-service-home-chat-input-filter-button-window-size {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 22px;
+
+                                        .boxer-service-home-chat-input-filter-button-window-size-title {
+                                            font-size: 25px;
+                                            font-weight: 700;
+                                            color: consts.$title-color;
+                                        }
+
+                                        .boxer-service-home-chat-input-filter-button-window-size-item {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 15px;
+
+                                            div {
+                                                width: 68px;
+
+                                                input {
+                                                    cursor: pointer;
+                                                    appearance: none;
+                                                    -webkit-appearance: none;
+                                                    -moz-appearance: none;
+                                                    border-radius: 8px;
+                                                    border: 2px solid consts.$gray2-color;
+
+                                                    &:checked {
+                                                        border: none;
+                                                        background-color: #7E7E7E;
+                                                    }
+                                                }
+                                            }
+
+                                            label {
+                                                cursor: pointer;
+                                                font-size: 25px;
+                                                font-weight: 700;
+
+                                            }
+                                        }
+                                    }
+
+                                    .boxer-service-home-chat-input-filter-button-window-resolution {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 22px;
+
+                                        .boxer-service-home-chat-input-filter-button-window-resolution-title {
+                                            font-size: 25px;
+                                            font-weight: 700;
+                                            color: consts.$title-color;
+                                        }
+
+                                        .boxer-service-home-chat-input-filter-button-window-resolution-item {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 14px;
+
+                                            label {
+                                                cursor: pointer;
+                                                font-size: 25px;
+                                                font-weight: 700;
+                                            }
+
+                                            input {
+                                                cursor: pointer;
+                                                appearance: none;
+                                                -webkit-appearance: none;
+                                                -moz-appearance: none;
+                                                width: 30px;
+                                                height: 30px;
+                                                border-radius: 8px;
+                                                border: 2px solid consts.$gray2-color;
+
+                                                &:checked {
+                                                    border: none;
+                                                    background-color: #7E7E7E;
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .boxer-service-home-chat-input-filter-button-window-submit {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-end;
+
+                                    button {
+                                        padding: 8px 23px 9px 23px;
+                                        background-color: #ECE0FD;
+                                        border-radius: 70px;
+                                        font-size: 25px;
+                                        font-weight: 700;
+                                        color: consts.$title-color;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                            }
+                        }
+
+                        .boxer-service-home-chat-input-input {
+                            border-radius: consts.$border-radius;
+                            background-color: rgba(222, 234, 255, 0.48);
+                            padding: 25px 46px 27px 46px;
+                            margin-right: 20px;
+                            display: flex;
+                            flex-grow: 1;
+
+                            input {
+                                width: 100%;
+                                background: none;
+                                width: 100%;
+                                border: none;
+                                color: consts.$title-color;
+                                font-size: 25px;
+                                font-weight: 700;
+                                outline: none;
+
+                                &::placeholder {
+                                    color: consts.$gray2-color;
+                                }
+                            }
+                        }
+
+                        .boxer-service-home-chat-input-send-button {
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+
+                            img {
+                                cursor: pointer;
+                                width: 82px;
+                                height: 82px;
+                            }
+                        }
+                    }
+
+                    .boxer-service-home-chat-messages {
+
+                        height: calc(100vh - 190px);
+                        overflow-y: auto;
+                        padding-right: 38px;
+
+                        &::-webkit-scrollbar {
+                            width: 18px;
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background-color: #EAEAEA;
+                            border-radius: 20px;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #B3AEBA;
+                            border-radius: 20px;
+                        }
+
+                        .boxer-service-home-chat-messages-container {
+                            width: 952px;
+                            display: flex;
+                            flex-direction: column;
+
+                            .bot-message-container {
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                margin-bottom: 35px;
+                                -webkit-user-select: none;
+                                -moz-user-select: none;
+                                -ms-user-select: none;
+                                user-select: none;
+
+                                .bot-message-container-message {
+                                    max-width: 60%;
+                                    overflow-wrap: break-word;
+                                    border-radius: consts.$border-radius;
+                                    padding: 22px 32px 22px 32px;
+                                    background-color: #8fb1f4;
+                                    color: consts.$title-color;
+                                    font-size: 25px;
+                                    font-weight: 700;
+
+
+                                    img {
+                                        border-radius: 30px;
+                                        width: 277px;
+                                        height: 334px;
+                                        object-fit: cover;
+                                    }
+
+                                    .bot-message-container-message-buttons {
+                                        display: flex;
+                                        gap: 10px;
+
+                                        button {
+                                            font-size: 25px;
+                                            font-weight: 700;
+                                            color: consts.$title-color;
+                                            border: none;
+                                            border-radius: consts.$border-radius;
+                                            background-color: #F9FBFF;
+                                            cursor: pointer;
+                                            padding: 12px 32px 11px 32px;
+
+                                        }
+
+                                        .bot-message-container-message-buttons-img {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 10px;
+                                            padding: 12px 15px 11px 15px;
+
+                                            img {
+                                                width: 25px;
+                                                height: 25px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .user-message-container {
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                margin-bottom: 60px;
+
+                                .user-message-container-message {
+                                    max-width: 60%;
+                                    overflow-wrap: break-word;
+                                    border-radius: consts.$border-radius;
+                                    padding: 22px 32px 22px 32px;
+                                    background-color: #F9FBFF;
+                                    color: consts.$title-color;
+                                    font-size: 25px;
+                                    font-weight: 700;
+
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                .boxer-service-history {
+                    width: 431px;
+                    border-radius: 38px;
+                    background-color: #F9FBFF;
+                    height: max-content;
+                    display: flex;
+                    flex-direction: column;
+                    height: calc(100vh - 100px);
+                    overflow-y: auto;
+
+                    &::-webkit-scrollbar {
+                        width: 18px;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        background-color: #EAEAEA;
+                        border-radius: 0px 20px 20px 0px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #E3D6F3;
+                        border-radius: 20px;
+                    }
+
+                    .boxer-service-history-title {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 25px;
+                        margin-bottom: 46px;
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: consts.$text-color;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                    }
+
+                    .boxer-service-history-content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 16px;
+
+                        .boxer-service-history-content-item {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 4px;
+                            font-size: 25px;
+                            font-weight: 700;
+                            color: consts.$text-color;
+
+                            img {
+                                -webkit-user-select: none;
+                                -moz-user-select: none;
+                                -ms-user-select: none;
+                                user-select: none;
+                                width: 236px;
+                                height: 284px;
+                                border-radius: 30px;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,643 @@
+@use "../../../presets/consts";
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+
+    .home-page-header {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 135px;
+
+        .home-page-header-container {
+            width: consts.$home-pages-content-width-1206;
+            display: flex;
+            gap: 35px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            .home-page-header-container-news {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                .home-page-header-container-news-sub-title {
+                    font-size: 25px;
+                    font-weight: 700;
+                    color: consts.$title-color;
+                    margin-bottom: 20px;
+                }
+
+                .home-page-header-container-news-title {
+                    font-size: 65px;
+                    font-weight: 700;
+                    line-height: 71px;
+                    color: consts.$title-color;
+                    overflow-wrap: break-word;
+                    margin-bottom: 35px;
+
+                    .home-page-header-container-news-title-logo {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                    }
+                }
+
+                .home-page-header-container-news-about {
+                    font-size: 30px;
+                    font-weight: 500;
+                    color: consts.$gray2-color;
+                    overflow-wrap: break-word;
+                    margin-bottom: 56px;
+                }
+
+                .home-page-header-container-news-links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 15px;
+
+                    .home-page-header-container-news-links-link {
+                        display: flex;
+                        align-items: center;
+
+                        .home-page-header-container-news-links-message {
+                            padding: 14px 10px 14px 11px;
+                            background-color: #F7F1FF;
+                            border-radius: 30px;
+                            position: relative;
+
+                            .home-page-header-container-news-links-message-text {
+                                font-size: 24px;
+                                font-weight: 700;
+                                line-height: 31px;
+                                overflow-wrap: break-word;
+                                color: consts.$text-color;
+                                width: 298px;
+                            }
+
+                            .home-page-header-container-news-links-by {
+                                position: absolute;
+                                font-size: 20px;
+                                font-weight: 700;
+                                line-height: 24px;
+                                color: consts.$text-color;
+                                top: 55px;
+                                right: 17px;
+                            }
+                        }
+
+                        .home-page-header-container-news-links-1 {
+                            display: flex;
+                            position: relative;
+                            color: #B176FD;
+                            font-size: 32px;
+                            font-weight: 700;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 26px 49px 26px 23px;
+                            background-color: #F7F1FF;
+                            border-radius: 30px;
+                            cursor: pointer;
+
+                            img {
+                                position: absolute;
+                                top: 20px;
+                                right: 15px;
+                            }
+                        }
+
+                        .home-page-header-container-news-links-2 {
+                            display: flex;
+                            align-items: center;
+                            padding: 11px 62px 11px 11px;
+                            background-color: #F7F1FF;
+                            border-radius: 30px;
+                            gap: 25px;
+                            position: relative;
+                            cursor: pointer;
+
+                            .home-page-header-container-news-links-2-text {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 8px;
+
+                                .home-page-header-container-news-links-2-text-1 {
+                                    font-size: 25px;
+                                    font-weight: 700;
+                                    color: #848484;
+                                }
+
+                                .home-page-header-container-news-links-2-text-2 {
+                                    color: #A3A3A3;
+                                    font-size: 19px;
+                                    font-weight: 700;
+                                }
+                            }
+
+                            .home-page-header-container-news-links-2-arrow {
+                                position: absolute;
+                                top: 19px;
+                                right: 32px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            .home-page-header-container-service {
+                position: relative;
+
+                .home-page-header-container-service-img {
+                    object-fit: cover;
+                    width: 618px;
+                    height: 756px;
+                    border-radius: consts.$border-radius;
+                }
+
+                .home-page-header-container-service-link {
+                    position: absolute;
+                    top: 628px;
+                    right: 29px;
+                    cursor: pointer;
+                    width: fit-content;
+                    padding: 21px 18px 21px 34px;
+                    border-radius: 30px;
+                    background-color: rgba(224, 200, 255, 0.33);
+                    display: flex;
+                    gap: 25px;
+                    color: #FFFF;
+                    -webkit-text-stroke-width: 0.5;
+                    -webkit-text-stroke-color: #FFF;
+                    font-size: 40px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+    }
+
+    .home-page-content {
+        padding: 80px 0px 80px 0px;
+        display: flex;
+        justify-content: center;
+        background-color: #FAFAFA;
+        border-radius: 90px 90px 0px 0px;
+
+        .home-page-content-container {
+            width: consts.$home-pages-content-width-1206;
+            display: flex;
+            flex-direction: column;
+
+            .home-page-content-section {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 80px;
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                .home-page-content-section-title {
+                    font-size: 40px;
+                    font-weight: 700;
+                    color: consts.$text-color;
+                    margin-bottom: 50px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .home-page-content-section-title-link {
+                        padding: 10px 49px 10px 49px;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        font-size: 30px;
+                        font-weight: 500;
+                        color: consts.$button-text;
+                        background-color: consts.$main-color;
+                        border-radius: consts.$border-radius;
+
+                        img {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+
+                .home-page-content-section-list-container {
+                    display: flex;
+                    flex-direction: column;
+
+                    .home-page-content-section-list-services {
+                        display: flex;
+                        margin-bottom: 20px;
+                        gap: 78px;
+
+                        .home-page-content-section-list-services-item {
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                            position: relative;
+
+                            .home-page-content-section-list-services-item-image {
+                                width: 350px;
+                                height: 409px;
+                                border-radius: consts.$border-radius;
+                                object-fit: cover;
+
+                            }
+
+                            .home-page-content-section-list-services-item-name {
+                                position: absolute;
+                                color: consts.$main-color;
+                                -webkit-text-stroke-width: 0.5;
+                                -webkit-text-stroke-color: consts.$main-color;
+                                font-size: 40px;
+                                font-weight: 700;
+                                top: 340px;
+                                left: 30px;
+                            }
+
+                            .home-page-content-section-list-services-item-status-true {
+                                width: 62px;
+                                height: 62px;
+                                background-color: consts.$main-color;
+                                border-radius: 100%;
+                                position: absolute;
+                                top: 18px;
+                                right: 21px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                img {
+                                    width: 25px;
+                                    height: 25px;
+                                }
+                            }
+
+                            .home-page-content-section-list-services-item-status-false {
+                                background-color: consts.$main-color;
+                                padding: 6px 14px 6px 14px;
+                                color: #C1A0EC;
+                                font-size: 25px;
+                                font-weight: 700;
+                                width: fit-content;
+                                top: 25px;
+                                left: 30px;
+                                border-radius: consts.$border-radius;
+                                position: absolute;
+                            }
+
+
+                        }
+                    }
+
+                    .home-page-content-section-list-news {
+                        display: flex;
+                        margin-bottom: 20px;
+                        gap: 35px;
+
+                        .home-page-content-section-list-news-item {
+                            position: relative;
+                            cursor: pointer;
+
+                            .home-page-content-section-list-news-item-image {
+                                width: 378px;
+                                height: 284px;
+                                border-radius: consts.$border-radius;
+                                object-fit: cover;
+                            }
+
+                            .home-page-content-section-list-news-item-title {
+                                position: absolute;
+                                bottom: 27px;
+                                left: 30px;
+                                width: 300px;
+                                overflow-wrap: break-word;
+                                font-size: 30px;
+                                font-weight: 700;
+                                line-height: 34px;
+                                color: consts.$title-color;
+                            }
+
+                            .home-page-content-section-list-news-item-link {
+                                position: absolute;
+                                top: 16px;
+                                right: 13px;
+                                border-radius: 100%;
+                                background-color: consts.$main-color;
+                                width: 62px;
+                                height: 62px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                -webkit-user-select: none;
+                                -moz-user-select: none;
+                                -ms-user-select: none;
+                                user-select: none;
+
+                                img {
+                                    width: 25px;
+                                    height: 25px;
+                                }
+                            }
+                        }
+                    }
+
+                    .home-page-content-section-list-pagination {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .home-page-content-section-list-pagination-arrows {
+                            display: flex;
+                            align-items: center;
+                            gap: 41px;
+                        }
+
+                        .home-page-content-section-list-pagination-pages {
+                            display: flex;
+                            gap: 25px;
+
+                            .home-page-content-section-list-pagination-pages-unselected {
+                                width: 45px;
+                                height: 7px;
+                                background-color: consts.$gray2-color;
+                                border-radius: consts.$border-radius;
+                                cursor: pointer;
+
+                                @keyframes wideOut {
+                                    0% {
+                                        width: 161px;
+                                    }
+
+                                    100% {
+                                        width: 45px;
+                                    }
+                                }
+
+                                width: 161px;
+                                transform-origin: center;
+                                animation: wideOut 0.3s ease-out forwards;
+                            }
+
+                            .home-page-content-section-list-pagination-pages-selected {
+                                @keyframes wideIn {
+                                    0% {
+                                        width: 45px;
+                                    }
+
+                                    100% {
+                                        width: 161px;
+                                    }
+                                }
+
+                                width: 45px;
+                                transform-origin: center;
+                                animation: wideIn 0.3s ease-in forwards;
+                                height: 7px;
+                                background-color: #838383;
+                                border-radius: consts.$border-radius;
+                            }
+                        }
+                    }
+
+
+                }
+
+                .home-page-content-section-subscription {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .home-page-content-section-subscription-item {
+                        width: 371px;
+                        height: 597px;
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        padding: 7px 6px 7px 6px;
+                        border-radius: consts.$border-radius;
+
+                        &:nth-child(1) {
+                            background-color: #EBF1FF;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #FCE7E7;
+                        }
+
+                        &:nth-child(3) {
+                            background-color: #E9F7FF;
+                        }
+
+                        &:nth-child(1) {
+                            .home-page-content-section-subscription-item-title {
+                                .home-page-content-section-subscription-item-title-img {
+                                    opacity: 0.61;
+                                }
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            .home-page-content-section-subscription-item-title {
+                                .home-page-content-section-subscription-item-title-img {
+                                    opacity: 0.61;
+                                }
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            .home-page-content-section-subscription-item-title {
+                                .home-page-content-section-subscription-item-title-img {
+                                    opacity: 0.61;
+                                }
+                            }
+                        }
+
+                        .home-page-content-section-subscription-item-title {
+                            position: relative;
+                            margin-bottom: 23px;
+
+                            .home-page-content-section-subscription-item-title-img {
+                                width: 100%;
+                                height: 247px;
+                                object-fit: cover;
+                                border-radius: consts.$border-radius;
+                            }
+
+                            .home-page-content-section-subscription-item-title-name {
+                                position: absolute;
+                                top: 25px;
+                                left: 23px;
+                                color: #2B2B2B;
+                                font-size: 40px;
+                                font-weight: 500;
+                            }
+
+                            .home-page-content-section-subscription-item-title-price {
+                                position: absolute;
+                                top: 107px;
+                                left: 23px;
+                                color: #343434;
+                                display: flex;
+
+                                div:nth-child(1) {
+                                    font-size: 50px;
+                                    font-weight: 400;
+                                    font-family: "Montserrat";
+                                }
+
+                                div:nth-child(2) {
+                                    font-size: 50px;
+                                    font-weight: 600;
+                                }
+
+                            }
+
+                        }
+
+                        .home-page-content-section-subscription-item-info {
+                            padding-left: 24px;
+                            padding-right: 40px;
+                            position: relative;
+
+                            .home-page-content-section-subscription-item-info-item {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                font-size: 25px;
+                                font-weight: 600;
+                                color: consts.$title-color;
+                                margin-bottom: 25px;
+                            }
+
+                        }
+
+                        .home-page-content-section-subscription-item-link-1 {
+                            position: absolute;
+                            bottom: 24px;
+                            left: 30px;
+                            width: fit-content;
+                            cursor: pointer;
+                            padding: 13px 19px 13px 20px;
+                            border-radius: consts.$border-radius;
+                            font-size: 25px;
+                            font-weight: 600;
+                            color: consts.$button-text;
+                            background-color: #C5D6FF;
+                        }
+
+                        .home-page-content-section-subscription-item-link-2 {
+                            position: absolute;
+                            bottom: 24px;
+                            left: 30px;
+                            width: fit-content;
+                            cursor: pointer;
+                            padding: 13px 19px 13px 20px;
+                            border-radius: consts.$border-radius;
+                            font-size: 25px;
+                            font-weight: 600;
+                            color: consts.$button-text;
+                            background-color: #FFC3C3;
+
+                        }
+
+                        .home-page-content-section-subscription-item-link-3 {
+                            position: absolute;
+                            bottom: 24px;
+                            left: 30px;
+                            width: fit-content;
+                            cursor: pointer;
+                            padding: 13px 19px 13px 20px;
+                            border-radius: consts.$border-radius;
+                            font-size: 25px;
+                            font-weight: 600;
+                            color: consts.$button-text;
+                            background-color: #C7EBFF;
+
+                        }
+                    }
+                }
+
+                .home-page-content-section-about-us {
+                    display: flex;
+                    gap: 44px;
+
+                    .home-page-content-section-about-us-img {
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 30px;
+
+                        img {
+                            width: 258px;
+                            height: 258px;
+                            border-radius: 30px;
+                        }
+                    }
+
+                    .home-page-content-section-about-us-info {
+                        max-width: 50%;
+
+                        .home-page-content-section-about-us-info-logo {
+                            width: 100%;
+                            height: 300px;
+                            margin-bottom: 50px;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                        }
+
+                        .home-page-content-section-about-us-info-text {
+                            width: 588px;
+                            font-size: 30px;
+                            font-weight: 600;
+                            color: consts.$gray2-color;
+                            overflow-wrap: break-word;
+                            margin-bottom: 61px;
+                        }
+
+                        .home-page-content-section-about-us-donate {
+                            padding: 27px 27px 26px 27px;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+                            font-size: 25px;
+                            font-weight: 500;
+                            color: consts.$button-text;
+                            border-radius: consts.$border-radius;
+                            background-color: consts.$main-color;
+                            width: fit-content;
+                            display: flex;
+                            align-items: center;
+                            gap: 13px;
+                            cursor: pointer;
+
+                            img {
+                                width: 18px;
+                                height: 18px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}

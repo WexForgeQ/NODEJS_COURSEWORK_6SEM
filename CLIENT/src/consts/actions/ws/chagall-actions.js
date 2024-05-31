@@ -1,0 +1,3 @@
+export const CHAGALL_ACTIONS = {
+    SET_HISTORY: "SET_HISTORY",
+}
